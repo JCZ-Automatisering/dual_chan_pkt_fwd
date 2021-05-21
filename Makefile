@@ -10,7 +10,7 @@ LIBS = -lwiringPi
 all: dual_chan_pkt_fwd
 
 dual_chan_pkt_fwd: base64.o dual_chan_pkt_fwd.o
-	$(CXX) $(LDFLAGS) dual_chan_pkt_fwd.o base64.o $(LIBS) -o dual_chan_pkt_fwd
+	$(CXX) $(CXXFLAG) $(LDFLAGS) dual_chan_pkt_fwd.o base64.o $(LIBS) -o dual_chan_pkt_fwd
 
 dual_chan_pkt_fwd.o: dual_chan_pkt_fwd.cpp
 	$(CXX) $(CXXFLAGS) -c dual_chan_pkt_fwd.cpp
